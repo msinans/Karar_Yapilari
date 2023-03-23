@@ -71,14 +71,30 @@ namespace Karar_Yapilari
         private void button5_Click(object sender, EventArgs e)
         {
             int sayi = Convert.ToInt16(textBox5.Text);
-            if (sayi >= 10 || sayi%2 ==0)
+            if (sayi >= 10 || sayi % 2 == 0)
             {
                 label5.Text = "10'dan büyük veya çift";
             }
             else
             {
-                label5.Text = "10'dan büyük deðil veya çift deðil"; 
+                label5.Text = "10'dan büyük deðil veya çift deðil";
             }
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            int saat = DateTime.Now.Hour;
+            
+            label6.Text = (saat < 19) ? "Henüz hava kararmadý" : "Güneþ battý, hava karardý";
+
+            /*
+             if (saat <= 19)
+            {
+                label6.Text = "Henüz hava kararmadý";
+            }
+            else 
+                label6.Text =" Güneþ battý. Hava karardý. ";
+            */
         }
     }
 }
